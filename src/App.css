@@ -1,109 +1,47 @@
-main{
-  display: flex;
-  flex-direction: row;
-}
 
-.game {
-  display: flex;
-  flex-direction: row;
-  padding-right: 100px;
-}
-
-.highlight {
-  background-color: yellow !important;
-}
-
-.game-info {
-  margin-left: 20px;
-}
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 36px;
-  margin-right: -1px;
-  margin-top: -1px;
-  text-align: center;
-  width: 36px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.board-row:first-child .square {
-  margin-top: 0;
-}
-
-.board-row:last-child .square {
-  margin-bottom: 0;
-}
-
-.square.X {
-  color: #f00;
-}
-
-.square.O {
-  color: #00f;
-}
-
-.game-info h4 {
-  margin-top: 0;
-}
-
-.game-info button {
+button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
-}
-
-.game-info ol {
-  padding-left: 20px;
-}
-
-.game-info li {
-  padding: 10px 0;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.game-info li button {
-  font-weight: bold;
-}
-
-.game-info li span {
-  font-size: 12px;
-  margin-left: 5px;
-  color: #888;
-}
-
-.game-info li b {
-  font-weight: normal;
-  color: #888;
-}
-
-li button.selected {
-  background-color: transparent;
-}
-
-.system{
+  display: inline-flex;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
 
-.system_message{
-  font-weight: bold;
+button:hover,
+button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
-.system_status{
-  color: red;
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }

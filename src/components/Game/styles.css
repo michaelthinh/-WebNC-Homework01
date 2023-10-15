@@ -1,0 +1,69 @@
+main{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+  }
+  
+  .highlight {
+    background-color: yellow !important;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  .game-info h4 {
+    margin-top: 0;
+  }
+  
+  .game-info button {
+    cursor: pointer;
+  }
+  
+  .game-info ol {
+    padding-left: 20px;
+  }
+  
+  .game-info li {
+    padding: 10px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .game-info li button {
+    font-weight: bold;
+  }
+  
+  .game-info li span {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #888;
+  }
+  
+  .game-info li b {
+    font-weight: normal;
+    color: #888;
+  }
+  
+  li button.selected {
+    background-color: transparent;
+  }
+  
+  .system{
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .system_message{
+    font-weight: bold;
+  }
+  
+  .system_status{
+    color: red;
+  }

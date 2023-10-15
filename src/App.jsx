@@ -49,7 +49,7 @@ export default function Game() {
     const currentHistory = history.slice(0, stepNumber + 1);
     const current = currentHistory[currentHistory.length - 1];
     const status = winner
-        ? `Winner:  ${winner.winner} - Press "Reset Game to create New Game"`
+        ? `Winner:  ${winner.winner} - You CANNOT CHANGE your moves now. Press "Reset Game to create New Game"`
         : history.length === 10 && !winner
         ? `Draw - Press "Reset Game to create New Game"`
         : "Next player: " + (xIsNext ? "X" : "O");

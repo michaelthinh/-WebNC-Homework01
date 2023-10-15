@@ -6,11 +6,11 @@ main{
 .game {
   display: flex;
   flex-direction: row;
+  padding-right: 100px;
 }
 
 .highlight {
   background-color: yellow !important;
-  border: 2px solid red !important;
 }
 
 .game-info {
@@ -33,7 +33,6 @@ main{
   height: 36px;
   margin-right: -1px;
   margin-top: -1px;
-  padding: 0;
   text-align: center;
   width: 36px;
 }
@@ -96,7 +95,9 @@ li button.selected {
 }
 
 .system{
-  margin-left: 50px;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .system_message{

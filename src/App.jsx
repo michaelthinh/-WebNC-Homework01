@@ -5,6 +5,7 @@ export default function Game() {
     const [history, setHistory] = useState([
         {
             squares: Array(9).fill(null),
+            picked: null,
         },
     ]);
     const [stepNumber, setStepNumber] = useState(0);
@@ -23,6 +24,7 @@ export default function Game() {
         const newHistory = currentHistory.concat([
             {
                 squares: current,
+                picked: i,
             },
         ]);
         const newWinner = calculateWinner(current);
@@ -51,9 +53,17 @@ export default function Game() {
         : history.length === 10 && !winner
         ? `Draw - Press "Reset Game to create New Game"`
         : "Next player: " + (xIsNext ? "X" : "O");
-
+    console.log(history);
     const moves = history.map((step, move) => {
-        const desc = move ? "Go to move #" + move : "Go to move #0";
+        const desc = move
+            ? "Go to move #" +
+              move +
+              " : ( " +
+              ((step.picked % 3) + 1) +
+              "," +
+              (Math.floor(step.picked / 3) + 1) +
+              " ) "
+            : "Go to game start";
         return (
             <li key={move}>
                 <button onClick={() => jumpTo(move)}>{desc}</button>
